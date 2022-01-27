@@ -53,6 +53,13 @@ public class BankController {
         return accountService.updateOwnerDetails(bank.getAccounts(), accountDto);
     }
 
+    // todo: tee endpoint, millega saab kontot lukustada/avada. Kontrolige ka ID olemasolu
+
+    @DeleteMapping("/delete/account")
+    public RequestResult deleteAccount(@RequestParam int accountId) {
+        return accountService.deleteAccount(bank.getAccounts(), accountId);
+    }
+
 
     // TODO: et saada bank objektist ülevaade, siis loo uus controlleri endpoint    /bank
     //  meetodi nimeks pane                                                         getBank()
