@@ -18,7 +18,7 @@ public class BankController {
     @Resource // autowire
     private BankService bankService;
 
-    @GetMapping("/bank")
+    @GetMapping("/bank") // endpoint
     public Bank getBank() {
         return bank;
     }
@@ -41,6 +41,11 @@ public class BankController {
     @PostMapping("/new/transaction")
     public RequestResult addNewTransaction(@RequestBody TransactionDto transactionDto) {
         return transactionService.addNewTransaction(bank, transactionDto);
+    }
+
+    @PostMapping("/receive/transaction")
+    public RequestResult receiveNewTransaction(@RequestBody TransactionDto transactionDto) {
+        return transactionService.receiveNewTransaction(bank, transactionDto);
     }
 
 
