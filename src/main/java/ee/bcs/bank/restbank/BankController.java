@@ -37,7 +37,7 @@ public class BankController {
     public RequestResult addAccountToBank(@RequestBody AccountDto accountDto) {
         return bankService.addAccountToBank(bank, accountDto);
     }
-    
+
     @PostMapping("/new/transaction")
     public RequestResult addNewTransaction(@RequestBody TransactionDto transactionDto) {
         return transactionService.addNewTransaction(bank, transactionDto);
@@ -48,6 +48,10 @@ public class BankController {
         return transactionService.receiveNewTransaction(bank, transactionDto);
     }
 
+    @PutMapping("/update/owner")
+    public RequestResult updateOwnerDetails(@RequestBody AccountDto accountDto) {
+        return accountService.updateOwnerDetails(bank.getAccounts(), accountDto);
+    }
 
 
     // TODO: et saada bank objektist ülevaade, siis loo uus controlleri endpoint    /bank
