@@ -1,15 +1,13 @@
-package ee.bcs.bank.restbank;
+package ee.bcs.bank.restbank_aleks;
 
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
 
-// Lombok'i annotatsioonid, mis loovad koodi kompileerimise hetkel vajalikud getterid ja setterid
 @Getter
 @Setter
-public class TransactionDto {
-    // DTO - Data Transfer Object
+public class TransactionDtoAleks {
     private int id;
     private int accountId;
     private String senderAccountNumber;
@@ -18,4 +16,5 @@ public class TransactionDto {
     private Integer balance;
     private LocalDateTime localDateTime;
     private Character transactionType;
+
 }

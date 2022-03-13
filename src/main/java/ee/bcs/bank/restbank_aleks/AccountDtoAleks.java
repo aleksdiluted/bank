@@ -1,17 +1,18 @@
-package ee.bcs.bank.restbank;
+package ee.bcs.bank.restbank_aleks;
+
 
 import lombok.Getter;
 import lombok.Setter;
 
-// Lombok'i annotatsioonid, mis loovad koodi kompileerimise hetkel vajalikud getterid ja setterid
 @Setter
 @Getter
-public class AccountDto {
-    // DTO - Data Transfer Object
+public class AccountDtoAleks {
+
     private int id;
     private String accountNumber;
     private String firstName;
     private String lastName;
     private Integer balance;
     private Boolean locked;
+
 }

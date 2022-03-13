@@ -1,12 +1,11 @@
-package ee.bcs.bank.restbank;
+package ee.bcs.bank.restbank_aleks;
 
 import lombok.Getter;
 import lombok.Setter;
 
-// Lombok'i annotatsioonid, mis loovad koodi kompileerimise hetkel vajalikud getterid ja setterid
-@Setter
 @Getter
-public class RequestResult {
+@Setter
+public class RequestResultAleks {
     private int accountId;
     private int transactionId;
     private String message;
